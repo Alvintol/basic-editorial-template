@@ -1,0 +1,27 @@
+.site .editorial-hero { display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 4rem; padding-block: 1rem 2rem; }
+.site .editorial-hero.without-image { grid-template-columns: 1fr; max-width: 55rem; }
+.site .hero-copy { padding-block: 1rem; }
+.site .editorial-hero h1 { font-size: clamp(3.3rem, 5.7vw, 6rem); line-height: 1.04; font-weight: 500; }
+.site .editorial-hero .hero-photo { align-self: stretch; display: flex; flex-direction: column; min-height: 31rem; }
+.site .editorial-hero .hero-photo img { flex: 1; height: 28rem; min-height: 0; }
+.site .editorial-hero .hero-photo figcaption { font-family: var(--font-accent); font-style: italic; font-size: 1rem; }
+.site .services-grid { grid-template-columns: 1fr; gap: 0; }
+.site .service-card { display: grid; grid-template-columns: 3rem 1fr; border: 0; border-top: 1px solid var(--border); background: transparent; padding: 1.7rem 0; gap: 2rem; }
+.site .service-body { display: grid; grid-template-columns: 1fr 1.3fr; column-gap: 3rem; }
+.site .service-body h3 { grid-column: 1; }
+.site .service-body .service-subtitle { grid-column: 1; margin-top: .5rem; }
+.site .service-body > p:not(.service-subtitle) { grid-column: 2; grid-row: 1 / span 2; margin: 0; }
+.site .service-body .feature-list { grid-column: 2; margin-top: 1rem; }
+.site .service-bottom { grid-column: 2; }
+.site .showcase .section-intro h2 { font-family: var(--font-accent); font-weight: 400; }
+.site .about h2 { font-family: var(--font-accent); font-weight: 400; }
+@media (max-width: 900px) { .site .editorial-hero { gap: 2rem; } }
+@media (max-width: 760px) {
+  .site .editorial-hero { grid-template-columns: 1fr; gap: 1.8rem; }
+  .site .editorial-hero h1 { font-size: clamp(3rem, 11vw, 4.8rem); }
+  .site .editorial-hero .hero-photo { min-height: 0; }
+  .site .editorial-hero .hero-photo img { height: 22rem; }
+  .site .service-card { grid-template-columns: 2rem 1fr; gap: 1rem; }
+  .site .service-body { display: block; }
+  .site .service-body > p:not(.service-subtitle) { margin-top: 1rem; }
+}
