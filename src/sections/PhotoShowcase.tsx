@@ -44,8 +44,10 @@ export const PhotoShowcase = ({ section }: { section: ShowcaseSection }) => {
     const cards = Array.from(node.children) as HTMLElement[];
     const target = cards[Math.max(0, Math.min(index, cards.length - 1))];
     if (!target) return;
-    node.scrollTo({ left: target.offsetLeft - cards[0].offsetLeft,
-      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+    node.scrollTo({
+      left: target.offsetLeft - cards[0].offsetLeft,
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
+    });
   };
   const keyboard = (event: KeyboardEvent<HTMLDivElement>) => {
     if (event.target !== event.currentTarget) return;
