@@ -4,7 +4,7 @@ import type { ClientConfig } from '../types';
 export const client = {
   "demo": {
     "enabled": true,
-    "label": "BASIC 01 / EDITORIAL CALM",
+    "label": "EDITORIAL CALM",
     "note": "Created by Alvin · Fictional business"
   },
   "business": {
